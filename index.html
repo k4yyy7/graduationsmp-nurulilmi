@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Graduation – YPI Nurul Ilmi Bekasi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ════════════ BACKGROUND MUSIC ════════════ -->
+<audio id="bg-music" loop preload="auto">
+  <source src="audio/Yura Yunita - Lihatlah Lebih Dekat.mp3" type="audio/mpeg" />
+</audio>
+
+<!-- ════════════ MUSIC TOGGLE ════════════ -->
+<button id="music-toggle" class="paused" aria-label="Toggle Music" title="Toggle Music">
+  <div class="music-disc"></div>
+  <div class="music-bars">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</button>
+
+<!-- ════════════ LIGHTBOX ════════════ -->
+<div id="lightbox" role="dialog" aria-modal="true">
+  <button id="lightbox-close" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+  <img id="lightbox-img" src="" alt="Foto diperbesar" />
+  <p id="lightbox-caption">YPI Nurul Ilmi Bekasi · Graduation 2026
+  </p>
+</div>
+
+<!-- ════════════ FLOATING DOCK ════════════ -->
+<div id="float-dock">
+  <a href="#sambutan"  class="dock-item" title="Sambutan">
+    <i class="fa-solid fa-quote-left"></i>
+    <span>Sambutan</span>
+  </a>
+  <a href="#rundown"   class="dock-item" title="Rundown">
+    <i class="fa-solid fa-list-check"></i>
+    <span>Rundown</span>
+  </a>
+  <div class="dock-sep"></div>
+  <a href="#galeri"    class="dock-item" title="Galeri">
+    <i class="fa-solid fa-images"></i>
+    <span>Galeri</span>
+  </a>
+  <a href="#lokasi"    class="dock-item" title="Lokasi">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Lokasi</span>
+  </a>
+  <div class="dock-sep"></div>
+  <a href="#rsvp"      class="dock-item" title="RSVP">
+    <i class="fa-solid fa-envelope-circle-check"></i>
+    <span>RSVP</span>
+  </a>
+</div>
+
+
+<!-- ════════════ HERO ════════════ -->
+<section id="hero">
+  <div id="cap-container" style="position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,#C5A059,transparent);z-index:2;"></div>
+  <div style="position:absolute;width:1px;height:150%;left:15%;top:-25%;background:rgba(197,160,89,0.04);transform:rotate(12deg);pointer-events:none;z-index:1;"></div>
+  <div style="position:absolute;width:1px;height:150%;right:13%;top:-25%;background:rgba(197,160,89,0.04);transform:rotate(-10deg);pointer-events:none;z-index:1;"></div>
+
+  <div class="envelope-wrap">
+    <div class="envelope" data-aos="fade-up" data-aos-duration="1400">
+
+      <div class="env-tag" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
+        Undangan Resmi
+      </div>
+
+      <!-- ══ GRADUATION CAP ════════════ -->
+      <div class="grad-cap-wrap" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1200">
+        <div class="grad-cap-glow"></div>
+        <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="40,2 78,20 40,38 2,20" fill="#C5A059"/>
+          <polygon points="40,2 78,20 40,38" fill="#D4B06A" opacity="0.45"/>
+          <path d="M24,28 L24,38 C24,44 32,48 40,48 C48,48 56,44 56,38 L56,28" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="40" cy="20" r="3" fill="#0B0F19" stroke="#E5C78F" stroke-width="1.2"/>
+          <path d="M55,20 C62,20 64,28 64,36 L64,46" stroke="#C5A059" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="64" cy="49" r="3.5" fill="#E5C78F"/>
+          <line x1="61" y1="49" x2="61" y2="56" stroke="#E5C78F" stroke-width="1" stroke-linecap="round"/>
+          <line x1="64" y1="51" x2="64" y2="58" stroke="#E5C78F" stroke-width="1" stroke-linecap="round"/>
+          <line x1="67" y1="49" x2="67" y2="56" stroke="#E5C78F" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <h1 class="env-title" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">
+        Graduation<br/>
+        <span class="accent">2026</span>
+      </h1>
+
+      <div class="steps-ornament" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+        <div class="step-bar" style="height:8px;"></div>
+        <div class="step-bar" style="height:14px;"></div>
+        <div class="step-bar" style="height:20px;"></div>
+        <div class="step-bar" style="height:28px;"></div>
+        <div class="step-bar" style="height:36px;"></div>
+      </div>
+
+      <p class="env-theme" data-aos="fade-up" data-aos-delay="430" data-aos-duration="1000">
+        "Small Steps – Big Dreams"
+      </p>
+
+      <p class="env-school" data-aos="fade-up" data-aos-delay="480" data-aos-duration="1000">
+        SMPIT YPI Nurul Ilmi Bekasi
+      </p>
+
+      <div class="env-line" data-aos="fade-up" data-aos-delay="550"></div>
+
+      <div class="env-date" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+        <i class="fa-regular fa-calendar" style="color:#C5A059;"></i>
+        Sabtu, 13 Juni 2026
+        <span class="gold-dot"></span>
+        07.00 WIB
+      </div>
+
+      <div data-aos="zoom-in-up" data-aos-delay="750" data-aos-duration="1200">
+        <button class="btn-open" id="btn-open-inv">
+          <i class="fa-solid fa-envelope-open-text"></i>
+          Buka Undangan
+          <i class="fa-solid fa-chevron-down" style="font-size:0.65rem;opacity:0.7;"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue" id="scroll-cue" style="opacity:0;transition:opacity 0.8s 1.2s;">
+    <i class="fa-solid fa-angles-down"></i>
+    <span>Gulir ke bawah</span>
+  </div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(197,160,89,0.2),transparent);"></div>
+</section>
+
+
+<!-- ════════════ SAMBUTAN ════════════ -->
+<section id="sambutan" class="dark-section">
+  <div class="max-w-4xl mx-auto" style="position:relative;z-index:1;">
+
+    <!-- Sambutan Kepala Sekolah -->
+    <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1400">
+      <p class="sec-label"><span>Pesan &amp; Harapan</span></p>
+      <h2 class="sec-title light">Sambutan Kepala Yayasan</h2>
+      <div class="gold-bar"></div>
+    </div>
+
+    <div class="glass-card quote-wrap max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1400">
+      <p class="font-jakarta text-sm md:text-base leading-relaxed text-slate-200 mb-6" style="position:relative;z-index:1;">
+        "Langkah kecil yang dimulai hari ini akan menjadi awal dari mimpi-mimpi besar di masa depan. Setiap proses, setiap perjuangan, dan setiap kenangan akan selalu menjadi bagian indah dalam perjalanan menuju kesuksesan."
+      </p>
+      <div class="flex items-center gap-3">
+        <div style="width:3.2rem;height:3.2rem;min-width:3.2rem;background:rgba(197,160,89,0.1);border:1px solid rgba(197,160,89,0.32);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#C5A059;font-size:1.1rem;">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <div>
+          <p class="font-cinzel font-bold text-white text-sm">Kepala Yayasan YPI Nurul Ilmi Bekasi</p>
+          <p class="text-xs text-slate-400 font-jakarta mt-0.5">Sumartono, M.T.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ VISI DAN MISI ════════════ -->
+    <div class="text-center mb-10" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1400">
+      <p class="sec-label"><span>Visi dan Misi</span></p>
+      <h2 class="sec-title light">Visi & Misi</h2>
+      <div class="gold-bar"></div>
+      <p class="text-slate-400 text-sm font-jakarta mt-4 max-w-xl mx-auto leading-relaxed">
+        Membangun Generasi Islami yang Unggul dan Berdaya Saing
+      </p>
+    </div>
+
+    <!-- Single VISI & MISI Card -->
+    <div class="glass-card max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1400" style="padding: 2.5rem;">
+
+      <!-- Main Icon -->
+      <div class="flex justify-center mb-8">
+        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-gold/25 to-gold/5 border border-gold/35 flex items-center justify-center" style="box-shadow: 0 0 30px rgba(197,160,89,0.15);">
+          <i class="fa-solid fa-graduation-cap text-gold text-3xl"></i>
+        </div>
+      </div>
+
+      <!-- VISI Section -->
+      <div class="text-center mb-8">
+        <p class="font-cinzel font-bold text-gold text-xs mb-4 tracking-widest uppercase">Visi</p>
+        <p class="text-slate-200 text-sm font-jakarta leading-relaxed max-w-lg mx-auto">
+          Mewujudkan Generasi Beriman dan Berwawasan Ilmu Pengetahuan
+        </p>
+      </div>
+
+      <!-- Gold Divider -->
+      <div class="flex items-center justify-center gap-4 mb-8">
+        <div style="width: 60px; height: 1px; background: linear-gradient(to right, transparent, rgba(197,160,89,0.5));"></div>
+        <i class="fa-solid fa-star text-gold/40" style="font-size: 0.6rem;"></i>
+        <div style="width: 60px; height: 1px; background: linear-gradient(to left, transparent, rgba(197,160,89,0.5));"></div>
+      </div>
+
+      <!-- MISI Section -->
+      <div class="text-center mb-6">
+        <p class="font-cinzel font-bold text-gold text-xs mb-5 tracking-widest uppercase">Misi</p>
+      </div>
+
+      <ul class="space-y-3 max-w-lg mx-auto">
+        <li class="flex items-start gap-3 text-slate-200 text-sm font-jakarta leading-relaxed">
+          <span class="text-gold mt-1 flex-shrink-0"><i class="fa-solid fa-diamond text-xs"></i></span>
+          Membentuk generasi penerus yang beriman dan memiliki aqidah yang kuat, berkarakter, cerdas dan kreatif, berbudi luhur, sehat, kuat, berpengetahuan dan terampil melalui proses pendidikan terpadu, seimbang dan berkelanjutan.
+        </li>
+        <li class="flex items-start gap-3 text-slate-200 text-sm font-jakarta leading-relaxed">
+          <span class="text-gold mt-1 flex-shrink-0"><i class="fa-solid fa-diamond text-xs"></i></span>
+          Menyelenggarakan pendidikan Prasekolah, Taman Kanak-kanak dan Sekolah Menengah yang mampu memberikan stimulasi yang efektif bagi perkembangan aspek mental-kognitif, moral, fisik dan sosial kepada peserta didik agar dapat mencapai perkembangan secara optimal baik secara individu maupun kelompok.
+        </li>
+        <li class="flex items-start gap-3 text-slate-200 text-sm font-jakarta leading-relaxed">
+          <span class="text-gold mt-1 flex-shrink-0"><i class="fa-solid fa-diamond text-xs"></i></span>
+          Menyelenggarakan pendidikan dasar Islam yang mampu membentuk karakter anak didik sehingga memiliki pengetahuan, sikap dan perilaku sesuai dengan tuntunan asas-asas pendidikan anak dalam Islam yang berlandaskan Al-Qur'an dan Sunnah.
+        </li>
+        <li class="flex items-start gap-3 text-slate-200 text-sm font-jakarta leading-relaxed">
+          <span class="text-gold mt-1 flex-shrink-0"><i class="fa-solid fa-diamond text-xs"></i></span>
+          Menyelenggarakan pendidikan Islam yang mampu memberikan bekal pengetahuan, sikap dan keterampilan yang mengantarkan anak didik untuk menjadi kader-kader berakhlak dan siap memasuki gerbang pendidikan selanjutnya.
+        </li>
+        <li class="flex items-start gap-3 text-slate-200 text-sm font-jakarta leading-relaxed">
+          <span class="text-gold mt-1 flex-shrink-0"><i class="fa-solid fa-diamond text-xs"></i></span>
+          Menyelenggarakan kegiatan keterampilan dan pendidikan secara islamiyah melalui kegiatan yang efektif dan maslahah.
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="text-center mt-14" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1400">
+      <div class="inline-block glass-card px-10 py-5">
+        <p class="text-slate-400 text-xs font-jakarta uppercase tracking-widest mb-1">Tema Graduation</p>
+        <p class="font-cinzel font-bold text-gold text-xl md:text-2xl tracking-wide">"SMALL STEPS – BIG DREAMS"</p>
+        <p class="text-slate-400 text-xs mt-1 font-jakarta italic">Small steps today, big dreams tomorrow.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════ TATA TERTIB ════════════ -->
+<section id="tatatertib" style="background:#FAF8F5;">
+  <div class="max-w-3xl mx-auto">
+
+    <div class="text-center mb-10" data-aos="fade-up" data-aos-duration="1400">
+      <p class="sec-label"><span>Ketentuan Acara</span></p>
+      <h2 class="sec-title">Tata Tertib</h2>
+      <div class="gold-bar"></div>
+      <p class="text-gray-500 text-xs font-jakarta mt-2">
+        <i class="fa-solid fa-clipboard-list text-gold mr-1"></i>Agenda Pelepasan Siswa/Siswi & Puncak Tema Tahun Ajaran 2025 - 2026
+      </p>
+      <p class="text-gray-600 text-xs font-jakarta mt-1 font-semibold">
+        YAYASAN PENDIDIKAN ISLAM NURUL ILMI
+      </p>
+    </div>
+
+    <div class="glass-card p-8 mb-10" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
+      <h3 class="font-cinzel font-bold text-navy text-lg mb-6 text-center">A. Siswa / Siswi</h3>
+      <div class="space-y-3">
+        <div class="flex items-start gap-3">
+          <div class="tata-num flex-shrink-0">1</div>
+          <p class="text-sm text-navy font-jakarta leading-relaxed">Hadir di lokasi paling lambat pk. <strong>06.30</strong> dengan menggunakan pakaian rapi/sopan</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="tata-num flex-shrink-0">2</div>
+          <p class="text-sm text-navy font-jakarta leading-relaxed">Pada pk. <strong>06.45</strong> sudah memasuki ruang acara</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="tata-num flex-shrink-0">3</div>
+          <p class="text-sm text-navy font-jakarta leading-relaxed">Duduk rapi sesuai dengan tempat duduk yang telah ditentukan</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="tata-num flex-shrink-0">4</div>
+          <p class="text-sm text-navy font-jakarta leading-relaxed">Mengikuti arahan dari guru masing-masing</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="tata-num flex-shrink-0">5</div>
+          <p class="text-sm text-navy font-jakarta leading-relaxed">Dianjurkan sudah sarapan dari rumah</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
+      <h3 class="font-cinzel font-bold text-navy text-lg mb-6 text-center">B. Bapak / Ibu / Walimurid</h3>
+      <div class="space-y-3">
+        <div class="flex items-start gap-3">
+          <div class="tata-num flex-shrink-0">1</div>
+          <p class="text-sm text-navy font-jakarta leading-relaxed">Undangan berlaku untuk bapak/ibu/walimurid yang namanya tertera pada surat undangan</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="tata-num flex-shrink-0">2</div>
+          <p class="text-sm text-navy font-jakarta leading-relaxed">Saat registrasi undangan akan di scan sesuai dengan QR code yang tertera, bagi yang tidak membawa undangan tidak diperkenankan memasuki ruang acara</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="tata-num flex-shrink-0">3</div>
+          <p class="text-sm text-navy font-jakarta leading-relaxed">Dianjurkan menggunakan baju batik terutama bagi para ayah</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="tata-num flex-shrink-0">4</div>
+          <p class="text-sm text-navy font-jakarta leading-relaxed">Acara akan dimulai pk. <strong>07.00 – selesai</strong></p>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="tata-num flex-shrink-0">5</div>
+          <p class="text-sm text-navy font-jakarta leading-relaxed">Tamu undangan diharapkan duduk dengan tertib sesuai kursi yang telah ditentukan</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="tata-num flex-shrink-0">6</div>
+          <p class="text-sm text-navy font-jakarta leading-relaxed">Saat acara berlangsung, tidak diperkenankan mengambil photo dengan maju ke arah panggung atau keluar dari tempat duduk. Pengambilan dokumentasi dilakukan oleh tim terkait dan hasilnya akan disampaikan kemudian</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="tata-num flex-shrink-0">7</div>
+          <p class="text-sm text-navy font-jakarta leading-relaxed">Demi ketertiban acara, agar menyetel handphone dengan mode <strong>silent / diam</strong></p>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="tata-num flex-shrink-0">8</div>
+          <p class="text-sm text-navy font-jakarta leading-relaxed">Sesi photo bersama keluarga akan dilakukan sebelum / sesudah acara dilaksanakan</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════ RUNDOWN ════════════ -->
+<section id="rundown" style="background:#EFECE6;">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="text-center mb-10" data-aos="fade-up" data-aos-duration="1400">
+      <p class="sec-label"><span>Hitung Mundur &amp; Agenda</span></p>
+      <h2 class="sec-title">Rundown Graduation</h2>
+      <div class="gold-bar"></div>
+      <p class="text-gray-500 text-xs font-jakarta mt-2">
+        <i class="fa-regular fa-calendar text-gold mr-1"></i>Sabtu, 13 Juni 2026 &nbsp;·&nbsp;
+        <i class="fa-regular fa-clock text-gold mr-1"></i>Pukul 07.00 WIB
+      </p>
+    </div>
+
+    <div class="grid grid-cols-4 gap-2 md:gap-4 mb-14" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1400">
+      <div class="cd-box" data-aos="zoom-in-up" data-aos-delay="0"><div class="cd-num" id="cd-days">00</div><div class="cd-lbl">Hari</div></div>
+      <div class="cd-box" data-aos="zoom-in-up" data-aos-delay="100"><div class="cd-num" id="cd-hours">00</div><div class="cd-lbl">Jam</div></div>
+      <div class="cd-box" data-aos="zoom-in-up" data-aos-delay="200"><div class="cd-num" id="cd-mins">00</div><div class="cd-lbl">Menit</div></div>
+      <div class="cd-box" data-aos="zoom-in-up" data-aos-delay="300"><div class="cd-num" id="cd-secs">00</div><div class="cd-lbl">Detik</div></div>
+    </div>
+
+   <div class="tl-wrap">
+      <div class="tl-item" data-aos="fade-right" data-aos-delay="0" data-aos-duration="1000"><div class="tl-dot"></div><div class="tl-title">Pembukaan</div></div>
+      <div class="tl-item" data-aos="fade-left" data-aos-delay="80" data-aos-duration="1000"><div class="tl-dot"></div><div class="tl-title">Prosesi Akhirussanah SD</div></div>
+      <div class="tl-item" data-aos="fade-right" data-aos-delay="160" data-aos-duration="1000"><div class="tl-dot"></div><div class="tl-title">Prosesi Akhirussanah SMP</div></div>
+      <div class="tl-item" data-aos="fade-left" data-aos-delay="240" data-aos-duration="1000"><div class="tl-dot"></div><div class="tl-title">Prosesi Wisuda Tahfidz Al-Qur'an</div></div>
+      <div class="tl-item" data-aos="fade-right" data-aos-delay="320" data-aos-duration="1000"><div class="tl-dot"></div><div class="tl-title">Pensi Kelas 6 dan 9</div></div>
+      <div class="tl-item" style="margin-bottom:0;" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000"><div class="tl-dot"></div><div class="tl-title">Penutupan</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════ GALERI ════════════ -->
+<section id="galeri" style="background:#FAF8F5;">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="text-center mb-10" data-aos="fade-up" data-aos-duration="1400">
+      <p class="sec-label"><span>Kenangan Bersama</span></p>
+      <h2 class="sec-title">Our Journey</h2>
+      <div class="gold-bar"></div>
+      <p class="text-gray-400 text-xs font-jakarta mt-2">
+        <i class="fa-solid fa-magnifying-glass-plus text-gold/60 mr-1"></i>Klik foto untuk melihat lebih besar
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4">
+      <div data-aos="zoom-in-up" data-aos-delay="0" data-aos-duration="1200">
+        <img class="gallery-img" src="img/smp1.jpeg" alt="Our Journey" onclick="openLightbox(this.src,'Our Journey · Growing Together, Reaching Higher')" />
+      </div>
+      <div data-aos="zoom-in-up" data-aos-delay="120" data-aos-duration="1200">
+        <img class="gallery-img" src="img/smp2.jpeg" alt="Dreamers of Tomorrow" onclick="openLightbox(this.src,'Dreamers of Tomorrow · Small Steps Today')" />
+      </div>
+      <div data-aos="zoom-in-up" data-aos-delay="240" data-aos-duration="1200">
+        <img class="gallery-img" src="img/smp3.jpeg" alt="One Last Chapter" onclick="openLightbox(this.src,'One Last Chapter · Graduation 2026')" />
+      </div>
+      <div data-aos="zoom-in-up" data-aos-delay="360" data-aos-duration="1200">
+        <img class="gallery-img" src="img/smp4.jpeg" alt="Little Memories" onclick="openLightbox(this.src,'Little Memories · Kenangan Tak Terlupakan')" />
+      </div>
+      <div data-aos="zoom-in-up" data-aos-delay="480" data-aos-duration="1200">
+        <img class="gallery-img" src="img/smp5.jpeg" alt="Steps to The Future" onclick="openLightbox(this.src,'Steps to The Future · Creating Bright Futures')" />
+      </div>
+      <div data-aos="zoom-in-up" data-aos-delay="600" data-aos-duration="1200">
+        <img class="gallery-img" src="img/smp6.jpeg" alt="Future Starts Here" onclick="openLightbox(this.src,'Future Starts Here · Proud to be Nurul Ilmi Generation')" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════ LOKASI ════════════ -->
+<section id="lokasi" style="background:#EFECE6;">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="text-center mb-10" data-aos="fade-up" data-aos-duration="1400">
+      <p class="sec-label"><span>Lokasi &amp; Waktu</span></p>
+      <h2 class="sec-title">Tempat Pelaksanaan</h2>
+      <div class="gold-bar"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div data-aos="fade-right" data-aos-duration="1400">
+        <div class="bg-white rounded-xl border border-gold/18 shadow-sm p-5 mb-5">
+          <div class="info-row">
+            <div class="info-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <div>
+              <p class="font-cinzel font-bold text-navy text-sm">Lapangan Nurul Ilmi</p>
+              <p class="text-gray-500 text-xs font-jakarta mt-0.5">BWI 2 Blok B1 No. 1, Kedungwaringin,<br/>Bekasi, Jawa Barat</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon"><i class="fa-regular fa-calendar-days"></i></div>
+            <div>
+              <p class="font-cinzel font-bold text-navy text-sm">Sabtu, 13 Juni 2026</p>
+              <p class="text-gray-500 text-xs font-jakarta mt-0.5">Pukul 07.00 WIB sampai selesai</p>
+            </div>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?q=YPI+Nurul+Ilmi+Kedungwaringin+Bekasi" target="_blank" rel="noopener" class="btn-maps" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+          <i class="fa-solid fa-location-dot"></i>Buka di Google Maps
+        </a>
+      </div>
+      <div class="map-wrap" data-aos="fade-left" data-aos-duration="1400">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0!2d107.25!3d-6.39!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjMnMjQuMCJTIDEwN8KwMTUnMDAuMCJF!5e0!3m2!1sid!2sid!4v1716000000000"
+          width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════ DRESSCODE ════════════ -->
+<section id="dresscode" class="dark-section">
+  <div class="max-w-4xl mx-auto" style="position:relative;z-index:1;">
+
+    <div class="text-center mb-10" data-aos="fade-up" data-aos-duration="1400">
+      <p class="sec-label"><span>Protokol Kehadiran</span></p>
+      <h2 class="sec-title light">Dresscode &amp; Ketentuan</h2>
+      <div class="gold-bar"></div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-5">
+      <div class="glass-card dress-card" data-aos="flip-left" data-aos-delay="0" data-aos-duration="1200">
+        <div class="dress-icon-wrap"><i class="fa-solid fa-person-dress"></i></div>
+        <p class="font-cinzel font-bold text-white text-xs mb-1.5">Ibu / Wali</p>
+        <p class="text-xs text-slate-300 font-jakarta leading-snug">Kebaya atau Gamis Formal · Warna Netral Elegan</p>
+      </div>
+      <div class="glass-card dress-card" data-aos="flip-left" data-aos-delay="120" data-aos-duration="1200">
+        <div class="dress-icon-wrap"><i class="fa-solid fa-person"></i></div>
+        <p class="font-cinzel font-bold text-white text-xs mb-1.5">Bapak / Wali</p>
+        <p class="text-xs text-slate-300 font-jakarta leading-snug">Koko / Batik Resmi · Celana Bahan</p>
+      </div>
+      <div class="glass-card dress-card" data-aos="flip-left" data-aos-delay="240" data-aos-duration="1200">
+        <div class="dress-icon-wrap"><i class="fa-solid fa-graduation-cap"></i></div>
+        <p class="font-cinzel font-bold text-white text-xs mb-1.5">Siswa</p>
+        <p class="text-xs text-slate-300 font-jakarta leading-snug">Toga Resmi Sekolah (telah disediakan panitia)</p>
+      </div>
+      <div class="glass-card dress-card" data-aos="flip-left" data-aos-delay="360" data-aos-duration="1200">
+        <div class="dress-icon-wrap"><i class="fa-solid fa-users"></i></div>
+        <p class="font-cinzel font-bold text-white text-xs mb-1.5">Kapasitas</p>
+        <p class="text-xs text-slate-300 font-jakarta leading-snug">Maks. 2 tamu undangan per siswa</p>
+      </div>
+    </div>
+
+    <div class="glass-card px-5 py-4" data-aos="fade-up" data-aos-delay="450" data-aos-duration="1200">
+      <div class="flex items-start gap-3">
+        <i class="fa-solid fa-circle-info text-gold mt-0.5 text-sm flex-shrink-0"></i>
+        <p class="text-slate-200 text-xs font-jakarta leading-relaxed">
+          Mohon tidak membawa anak kecil di bawah usia 5 tahun demi kelancaran prosesi. Harap mematikan atau mengalihkan ponsel ke mode senyap selama acara berlangsung. Pintu masuk akan ditutup saat prosesi dimulai pukul 07.30 WIB.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════ RSVP ════════════ -->
+<!-- <section id="rsvp" style="background:#EFECE6;">
+  <div class="max-w-xl mx-auto">
+
+    <div class="text-center mb-8" data-aos="fade-up" data-aos-duration="1400">
+      <p class="sec-label"><span>Konfirmasi Kehadiran</span></p>
+      <h2 class="sec-title">Form RSVP</h2>
+      <div class="gold-bar"></div>
+      <p class="text-gray-500 text-xs font-jakarta mt-2">
+        <i class="fa-regular fa-calendar text-gold mr-1"></i>
+        Mohon konfirmasi paling lambat <strong>6 Juni 2026</strong>
+      </p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-gold/16 shadow-lg p-6 md:p-8" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1400">
+
+      <form id="rsvp-form" class="space-y-4" novalidate>
+        <div>
+          <label class="block text-xs font-semibold text-navy mb-1.5 font-jakarta">
+            <i class="fa-solid fa-user text-gold mr-1"></i>Nama Lengkap Orang Tua / Wali *
+          </label>
+          <input class="form-input" type="text" placeholder="Contoh: Bapak Ahmad Fauzi" required />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-navy mb-1.5 font-jakarta">
+            <i class="fa-solid fa-child text-gold mr-1"></i>Nama Siswa *
+          </label>
+          <input class="form-input" type="text" placeholder="Nama lengkap putra/putri" required />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-navy mb-2 font-jakarta">
+            <i class="fa-solid fa-users text-gold mr-1"></i>Jumlah Tamu yang Hadir *
+          </label>
+          <div class="flex flex-wrap gap-2">
+            <div class="radio-opt">
+              <input type="radio" name="tamu" id="t1" value="1" required />
+              <label for="t1"><i class="fa-solid fa-user text-gold"></i>1 Orang</label>
+            </div>
+            <div class="radio-opt">
+              <input type="radio" name="tamu" id="t2" value="2" />
+              <label for="t2"><i class="fa-solid fa-user-group text-gold"></i>2 Orang</label>
+            </div>
+          </div>
+          <p class="text-gray-400 text-xs mt-1.5 font-jakarta">
+            <i class="fa-solid fa-circle-info text-gold/55 mr-1"></i>Maksimal 2 tamu per siswa
+          </p>
+        </div>
+        <button type="submit" class="btn-submit">
+          <i class="fa-solid fa-paper-plane mr-2"></i>Konfirmasi Kehadiran
+        </button>
+      </form>
+
+      <div id="rsvp-success" style="display:none;" class="text-center py-6">
+        <div style="width:4rem;height:4rem;background:linear-gradient(135deg,rgba(197,160,89,0.14),rgba(197,160,89,0.04));border:1px solid rgba(197,160,89,0.32);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.4rem;color:#C5A059;">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <p class="font-cinzel font-bold text-navy text-lg mb-2">Terima Kasih!</p>
+        <p class="text-gray-500 text-sm font-jakarta mb-4">Konfirmasi kehadiran Anda telah kami terima. Kami sangat menantikan kehadiran Bapak/Ibu di hari istimewa ini.</p>
+        <div style="display:flex;align-items:center;justify-content:center;gap:0.6rem;color:rgba(197,160,89,0.5);font-size:0.62rem;font-family:'Cinzel',serif;letter-spacing:0.18em;">
+          <span>—</span>SABTU · 13 JUNI 2026<span>—</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- ════════════ CLOSING ════════════ -->
+<section id="closing">
+  <div class="closing-inner">
+
+    <div data-aos="zoom-in" data-aos-duration="1200">
+      <div style="width:5rem;height:5rem;background:linear-gradient(135deg,#C5A059,#9B7B3A);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 0 0 6px rgba(197,160,89,0.12),0 0 40px rgba(197,160,89,0.3);font-size:1.8rem;color:#0B0F19;">
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+
+    <p class="font-cinzel text-gold/60 text-xs tracking-widest uppercase mb-3" data-aos="fade-up" data-aos-delay="120" data-aos-duration="1200">
+      Panitia Graduation 2026
+    </p>
+    <h2 class="font-cinzel font-black text-white text-2xl md:text-3xl tracking-wide mb-1" data-aos="fade-up" data-aos-delay="180" data-aos-duration="1200">
+      YPI NURUL ILMI BEKASI
+    </h2>
+    <p class="font-jakarta text-gold/55 text-xs tracking-widest uppercase mb-2" data-aos="fade-up" data-aos-delay="240" data-aos-duration="1200">
+      SDIT · SMPIT · Kedungwaringin · Bekasi
+    </p>
+
+    <div class="clos-divider" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+      <i class="fa-solid fa-star text-gold/40" style="font-size:0.6rem;"></i>
+    </div>
+
+    <div class="prayer-card" data-aos="fade-up" data-aos-delay="350" data-aos-duration="1400">
+      <i class="fa-solid fa-hands-praying text-gold text-xl mb-4 block"></i>
+      <p class="font-jakarta text-slate-300 text-sm md:text-base leading-relaxed mb-4">
+        Hari ini bukanlah akhir dari perjalanan, melainkan awal dari langkah baru untuk menggapai impian yang lebih besar. Bersama kenangan, doa, dan harapan, setiap siswa akan melanjutkan perjalanan menuju masa depan terbaiknya.
+      </p>
+      <p class="font-jakarta text-slate-400 text-sm leading-relaxed">
+        Terima kasih kepada seluruh guru dan orang tua yang telah menjadi bagian penting dalam perjalanan ini. Setiap ilmu, doa, dan dukungan akan selalu dikenang sepanjang waktu.
+      </p>
+    </div>
+
+    <div class="steps-ornament" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+      <div class="step-bar" style="height:10px;background:linear-gradient(to top,rgba(197,160,89,0.1),rgba(197,160,89,0.35));"></div>
+      <div class="step-bar" style="height:16px;background:linear-gradient(to top,rgba(197,160,89,0.15),rgba(197,160,89,0.45));"></div>
+      <div class="step-bar" style="height:22px;background:linear-gradient(to top,rgba(197,160,89,0.2),rgba(197,160,89,0.55));"></div>
+      <div class="step-bar" style="height:30px;background:linear-gradient(to top,rgba(197,160,89,0.25),rgba(197,160,89,0.65));"></div>
+      <div class="step-bar" style="height:38px;background:linear-gradient(to top,rgba(197,160,89,0.3),rgba(197,160,89,0.8));"></div>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="450" data-aos-duration="1400">
+      <div class="closing-badge">
+        <p class="font-jakarta text-gold/45 text-xs uppercase tracking-widest">Tema Graduation 2026</p>
+        <p class="font-cinzel font-black text-gold text-2xl md:text-3xl tracking-wider">"SMALL STEPS – BIG DREAMS"</p>
+        <p class="font-jakarta text-slate-400 text-xs italic mt-0.5">Small steps today, big dreams tomorrow.</p>
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.8rem;">
+          <span class="gold-dot"></span>
+          <span class="gold-dot" style="opacity:0.7;"></span>
+          <span class="gold-dot" style="opacity:0.4;"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="clos-divider" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+      <i class="fa-solid fa-star text-gold/40" style="font-size:0.6rem;"></i>
+    </div>
+
+    <blockquote data-aos="fade-up" data-aos-delay="550" data-aos-duration="1200" style="max-width:480px;margin:0 auto;">
+      <p class="font-jakarta text-slate-300 text-sm md:text-base leading-relaxed text-center">
+        Bersama kita belajar, tumbuh, tertawa, dan menciptakan kenangan yang tidak akan terlupakan. Setiap momen yang telah dilewati akan selalu menjadi cerita indah untuk dikenang di kemudian hari.
+      </p>
+    </blockquote>
+
+    <div class="clos-divider" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+      <i class="fa-solid fa-star text-gold/40" style="font-size:0.6rem;"></i>
+    </div>
+
+    <blockquote data-aos="fade-up" data-aos-delay="650" data-aos-duration="1200" style="max-width:460px;margin:0 auto;">
+      <p class="font-cinzel text-gold/55 text-sm md:text-base leading-relaxed italic text-center">
+        "Dan barangsiapa bersyukur, maka sesungguhnya ia bersyukur untuk dirinya sendiri."
+      </p>
+      <p class="font-jakarta text-slate-500 text-xs mt-2 text-center">— QS. An-Naml: 40</p>
+    </blockquote>
+
+    <div class="clos-divider" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+      <i class="fa-solid fa-star text-gold/40" style="font-size:0.6rem;"></i>
+    </div>
+
+    <p class="font-cinzel text-gold/70 text-sm md:text-base tracking-widest uppercase" data-aos="fade-up" data-aos-delay="750" data-aos-duration="1200">
+      Proud to be Nurul Ilmi Generation
+    </p>
+
+    <p class="font-jakarta text-slate-500 text-xs mt-4 leading-relaxed px-4" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1200">
+      Semoga setiap langkah yang diambil setelah hari ini membawa kebahagiaan, keberhasilan, dan masa depan yang penuh keberkahan.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-4 text-xs font-jakarta text-slate-500 mt-6 mb-2" data-aos="fade-up" data-aos-delay="850" data-aos-duration="1200">
+      <span><i class="fa-regular fa-calendar text-gold/60 mr-1"></i>Sabtu, 13 Juni 2026</span>
+      <span class="text-gold/20">·</span>
+      <span><i class="fa-regular fa-clock text-gold/60 mr-1"></i>07.00 WIB</span>
+      <span class="text-gold/20">·</span>
+      <span><i class="fa-solid fa-location-dot text-gold/60 mr-1"></i>YPI Nurul Ilmi, Kedungwaringin</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════ COPYRIGHT ════════════ -->
+<div class="copyright-strip" data-aos="fade-up" data-aos-duration="1000">
+  <p>
+    &copy; 2026 SDIT · SMPIT YPI Nurul Ilmi Bekasi &nbsp;&middot;&nbsp; Dibuat dengan <i class="fa-solid fa-heart"></i> untuk momen yang takkan terlupakan
+  </p>
+</div>
+
+
+<!-- ════════════ SCRIPTS ════════════ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
