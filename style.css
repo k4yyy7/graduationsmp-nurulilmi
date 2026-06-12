@@ -608,13 +608,109 @@
     }
     .btn-submit:hover { background-position: right; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(197,160,89,0.55); }
 
-    /* ══ RSVP SUCCESS ════════════════════════════════ */
+    /* ══ RSVP SUCCESS ANIMATION ════════════════════════════════ */
     #rsvp-success {
       animation: successFadeIn 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
     @keyframes successFadeIn {
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Success Icon Animation */
+    .success-icon-wrap {
+      position: relative;
+      width: 5rem;
+      height: 5rem;
+      margin: 0 auto 1.5rem;
+    }
+
+    .success-circle {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(197,160,89,0.15), rgba(197,160,89,0.05));
+      border: 2px solid rgba(197,160,89,0.35);
+      animation: circlePulse 2s ease-in-out infinite;
+    }
+
+    @keyframes circlePulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.08); opacity: 0.7; }
+    }
+
+    .success-checkmark {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      color: #C5A059;
+      animation: checkPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+    }
+
+    @keyframes checkPop {
+      0% { transform: scale(0) rotate(-180deg); opacity: 0; }
+      100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    }
+
+    /* Sparkles */
+    .success-sparkles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .sparkle {
+      position: absolute;
+      color: #C5A059;
+      font-size: 0.6rem;
+      opacity: 0;
+      animation: sparkleAnim 1.5s ease-out forwards;
+    }
+
+    .sparkle.s1 { top: -5px; left: 50%; transform: translateX(-50%); animation-delay: 0.5s; }
+    .sparkle.s2 { top: 20%; right: -8px; animation-delay: 0.6s; }
+    .sparkle.s3 { bottom: 15%; right: -5px; animation-delay: 0.7s; }
+    .sparkle.s4 { bottom: 15%; left: -5px; animation-delay: 0.8s; }
+    .sparkle.s5 { top: 20%; left: -8px; animation-delay: 0.9s; }
+
+    @keyframes sparkleAnim {
+      0% { opacity: 0; transform: scale(0) translateY(0); }
+      20% { opacity: 1; transform: scale(1.2) translateY(0); }
+      100% { opacity: 0; transform: scale(0.5) translateY(-20px); }
+    }
+
+    /* Confetti burst */
+    .confetti-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+      overflow: hidden;
+    }
+
+    .confetti {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      animation: confettiFall 3s ease-out forwards;
+    }
+
+    @keyframes confettiFall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+      }
     }
 
     /* ══ CLOSING SECTION ═════════════════════════════ */

@@ -213,12 +213,127 @@
   lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
-  /* ══ RSVP SUBMIT ════════════════════════════════════ */
-  document.getElementById('rsvp-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    this.style.display = 'none';
-    document.getElementById('rsvp-success').style.display = 'block';
-  });
+  /* ══ RSVP SUBMIT WITH FORMSPREE + SUCCESS ANIMATION ════════════ */
+  const rsvpForm = document.getElementById('rsvp-form');
+  const rsvpSuccess = document.getElementById('rsvp-success');
+
+  if (rsvpForm) {
+    rsvpForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(rsvpForm);
+      const submitBtn = rsvpForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>Mengirim...';
+      submitBtn.disabled = true;
+
+      try {
+        const response = await fetch(rsvpForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          // Hide form and show success with animation
+          rsvpForm.style.display = 'none';
+          rsvpSuccess.style.display = 'block';
+
+          // Trigger confetti burst
+          createConfetti();
+
+          // Save to localStorage to remember user has submitted
+          localStorage.setItem('rsvpSubmitted', 'true');
+
+          // Update dock button if exists
+          updateDockRSVPButton();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        alert('Maaf, terjadi kesalahan. Silakan coba lagi.');
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  }
+
+  /* Confetti Burst Animation */
+  function createConfetti() {
+    const container = document.createElement('div');
+    container.className = 'confetti-container';
+    document.body.appendChild(container);
+
+    const colors = ['#C5A059', '#E5C78F', '#D4B06A', '#9B7B3A', '#F7F3E8'];
+    const confettiCount = 60;
+
+    for (let i = 0; i < confettiCount; i++) {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.style.left = Math.random() * 100 + '%';
+      confetti.style.top = '-10px';
+      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.animationDelay = Math.random() * 0.5 + 's';
+      confetti.style.animationDuration = (2 + Math.random() * 2) + 's';
+      container.appendChild(confetti);
+    }
+
+    // Remove container after animation
+    setTimeout(() => {
+      container.remove();
+    }, 4000);
+  }
+
+  /* Check if user already submitted - DISABLED FOR NOW */
+  // function checkRSVPStatus() {
+  //   if (localStorage.getItem('rsvpSubmitted') === 'true' && rsvpForm && rsvpSuccess) {
+  //     rsvpForm.style.display = 'none';
+  //     rsvpSuccess.style.display = 'block';
+  //   }
+  // }
+
+  // Check on page load - disabled
+  // checkRSVPStatus();
+
+  /* Update dock RSVP button when form is submitted */
+  function updateDockRSVPButton() {
+    const rsvpDockItem = document.querySelector('.dock-item[href="#rsvp"]');
+    if (rsvpDockItem) {
+      rsvpDockItem.classList.add('rsvp-submitted');
+    }
+  }
+
+  // Also check localStorage on load for dock indicator only
+  if (localStorage.getItem('rsvpSubmitted') === 'true') {
+    updateDockRSVPButton();
+  }
+
+  // Add CSS for submitted state in dock
+  const dockStyle = document.createElement('style');
+  dockStyle.textContent = `
+    .dock-item.rsvp-submitted {
+      color: #4ade80 !important;
+    }
+    .dock-item.rsvp-submitted span {
+      color: rgba(74, 222, 128, 0.8) !important;
+    }
+    .dock-item.rsvp-submitted::after {
+      content: '';
+      position: absolute;
+      top: 0.2rem;
+      right: 0.2rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      background: #4ade80;
+      border-radius: 50%;
+      animation: dotPulse 2s ease-in-out infinite;
+    }
+    @keyframes dotPulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.7; }
+    }
+  `;
+  document.head.appendChild(dockStyle);
 
 
     tailwind.config = {

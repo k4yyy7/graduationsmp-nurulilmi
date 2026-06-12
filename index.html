@@ -490,71 +490,64 @@
 </section>
 
 
-<!-- ════════════ RSVP ════════════ -->
-<!-- <section id="rsvp" style="background:#EFECE6;">
+<!-- ════════════ KONFIRMASI KEHADIRAN ════════════ -->
+<section id="rsvp" style="background:#EFECE6;">
   <div class="max-w-xl mx-auto">
 
     <div class="text-center mb-8" data-aos="fade-up" data-aos-duration="1400">
       <p class="sec-label"><span>Konfirmasi Kehadiran</span></p>
-      <h2 class="sec-title">Form RSVP</h2>
+      <h2 class="sec-title">Konfirmasi Kehadiran</h2>
       <div class="gold-bar"></div>
       <p class="text-gray-500 text-xs font-jakarta mt-2">
         <i class="fa-regular fa-calendar text-gold mr-1"></i>
-        Mohon konfirmasi paling lambat <strong>6 Juni 2026</strong>
+        Mohon konfirmasi kehadiran Anda sebelum hari H
       </p>
     </div>
 
     <div class="bg-white rounded-2xl border border-gold/16 shadow-lg p-6 md:p-8" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1400">
 
-      <form id="rsvp-form" class="space-y-4" novalidate>
+      <form id="rsvp-form" action="https://formspree.io/f/xbdepgkj" method="POST" class="space-y-4" novalidate>
         <div>
           <label class="block text-xs font-semibold text-navy mb-1.5 font-jakarta">
-            <i class="fa-solid fa-user text-gold mr-1"></i>Nama Lengkap Orang Tua / Wali *
+            <i class="fa-solid fa-user text-gold mr-1"></i>Nama Siswa *
           </label>
-          <input class="form-input" type="text" placeholder="Contoh: Bapak Ahmad Fauzi" required />
+          <input class="form-input" type="text" name="Nama Siswa" placeholder="Masukkan nama lengkap siswa" required />
         </div>
         <div>
           <label class="block text-xs font-semibold text-navy mb-1.5 font-jakarta">
-            <i class="fa-solid fa-child text-gold mr-1"></i>Nama Siswa *
+            <i class="fa-solid fa-school text-gold mr-1"></i>Kelas *
           </label>
-          <input class="form-input" type="text" placeholder="Nama lengkap putra/putri" required />
-        </div>
-        <div>
-          <label class="block text-xs font-semibold text-navy mb-2 font-jakarta">
-            <i class="fa-solid fa-users text-gold mr-1"></i>Jumlah Tamu yang Hadir *
-          </label>
-          <div class="flex flex-wrap gap-2">
-            <div class="radio-opt">
-              <input type="radio" name="tamu" id="t1" value="1" required />
-              <label for="t1"><i class="fa-solid fa-user text-gold"></i>1 Orang</label>
-            </div>
-            <div class="radio-opt">
-              <input type="radio" name="tamu" id="t2" value="2" />
-              <label for="t2"><i class="fa-solid fa-user-group text-gold"></i>2 Orang</label>
-            </div>
-          </div>
-          <p class="text-gray-400 text-xs mt-1.5 font-jakarta">
-            <i class="fa-solid fa-circle-info text-gold/55 mr-1"></i>Maksimal 2 tamu per siswa
-          </p>
+          <input class="form-input" type="text" name="Kelas" placeholder="Contoh: IX-1" required />
         </div>
         <button type="submit" class="btn-submit">
           <i class="fa-solid fa-paper-plane mr-2"></i>Konfirmasi Kehadiran
         </button>
       </form>
 
+      <!-- Success Animation -->
       <div id="rsvp-success" style="display:none;" class="text-center py-6">
-        <div style="width:4rem;height:4rem;background:linear-gradient(135deg,rgba(197,160,89,0.14),rgba(197,160,89,0.04));border:1px solid rgba(197,160,89,0.32);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.4rem;color:#C5A059;">
-          <i class="fa-solid fa-check"></i>
+        <div class="success-icon-wrap">
+          <div class="success-checkmark">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div class="success-circle"></div>
+          <div class="success-sparkles">
+            <i class="fa-solid fa-star sparkle s1"></i>
+            <i class="fa-solid fa-star sparkle s2"></i>
+            <i class="fa-solid fa-star sparkle s3"></i>
+            <i class="fa-solid fa-star sparkle s4"></i>
+            <i class="fa-solid fa-star sparkle s5"></i>
+          </div>
         </div>
         <p class="font-cinzel font-bold text-navy text-lg mb-2">Terima Kasih!</p>
-        <p class="text-gray-500 text-sm font-jakarta mb-4">Konfirmasi kehadiran Anda telah kami terima. Kami sangat menantikan kehadiran Bapak/Ibu di hari istimewa ini.</p>
+        <p class="text-gray-500 text-sm font-jakarta mb-4">Konfirmasi kehadiran Anda telah kami terima.<br/>Sampai jumpa di hari istimewa!</p>
         <div style="display:flex;align-items:center;justify-content:center;gap:0.6rem;color:rgba(197,160,89,0.5);font-size:0.62rem;font-family:'Cinzel',serif;letter-spacing:0.18em;">
           <span>—</span>SABTU · 13 JUNI 2026<span>—</span>
         </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
 
 <!-- ════════════ CLOSING ════════════ -->
